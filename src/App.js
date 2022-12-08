@@ -5,9 +5,10 @@ import { useState } from "react";
 function App() {
   const nayok = [
     { name: "Jasim", age: "34" },
-    { name: "Kabir", age: "34" },
-    { name: "Faltu", age: "34" },
-    { name: "Maltu", age: "34" },
+    { name: "Kabir", age: "44" },
+    { name: "Faltu", age: "46" },
+    { name: "Maltu", age: "54" },
+    { name: "Baltu", age: "74" },
   ];
   return (
     <div className="App">
@@ -15,11 +16,14 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
       </header>
       <MoviesCounter></MoviesCounter>
+      {nayok.map((nk) => (
+        <Nayok name={nk.name} age={nk.age}></Nayok>
+      ))}
     </div>
   );
 }
 
-function User(props) {
+function Nayok(props) {
   const style = {
     border: "2px solid red",
     borderRadius: "5px",
@@ -27,7 +31,7 @@ function User(props) {
   return (
     <div style={style}>
       <h1>My name is: {props.name}</h1>
-      <p>My Occupation is"</p>
+      <p>My Age is: {props.age}</p>
     </div>
   );
 }
