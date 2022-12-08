@@ -3,17 +3,18 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const name = ["Jasim", "Kabir", "Faltu", "Maltu"];
+  const nayok = [
+    { name: "Jasim", age: "34" },
+    { name: "Kabir", age: "34" },
+    { name: "Faltu", age: "34" },
+    { name: "Maltu", age: "34" },
+  ];
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
       <MoviesCounter></MoviesCounter>
-      <User name={name[0]}></User>
-      <User name={name[1]}></User>
-      <User name={name[2]}></User>
-      <User name={name[3]}></User>
     </div>
   );
 }
