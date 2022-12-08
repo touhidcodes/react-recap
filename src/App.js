@@ -39,6 +39,15 @@ function MoviesCounter() {
     <div>
       <button onClick={eventClick}>Increase Movie</button>
       <h3>Movie Number is: {count}</h3>
+      <MovieDone movies={count + 2}></MovieDone>
+    </div>
+  );
+}
+
+function MovieDone(props) {
+  return (
+    <div>
+      <h2>Movie Done: {props.movies}</h2>
     </div>
   );
 }
