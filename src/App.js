@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
-      <Moviescounter></Moviescounter>
+      <MoviesCounter></MoviesCounter>
       <User name={name[0]}></User>
       <User name={name[1]}></User>
       <User name={name[2]}></User>
@@ -31,13 +31,14 @@ function User(props) {
   );
 }
 
-function Moviescounter() {
+function MoviesCounter() {
   const [count, setCount] = useState(0);
-  const eventHandle = () => setCount(count + 1);
+  const eventClick = () => setCount(count + 1);
+  console.log(count);
   return (
     <div>
-      <button onclick={eventHandle}>Increase Movie</button>
-      <h3>Movie Number is:{setCount}</h3>
+      <button onClick={eventClick}>Increase Movie</button>
+      <h3>Movie Number is: {count}</h3>
     </div>
   );
 }
